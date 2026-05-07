@@ -112,13 +112,15 @@ const Hero = () => {
         <div className="min-h-screen pb-20">
           {/* Navbar */}
           <nav className="z-50 flex items-center justify-between w-full py-4 px-6 md:px-16 lg:px-24 xl:px-40 text-sm">
-            <a href="https://prebuiltui.com">
-              <img
-                className="h-11 w-auto"
-                src="/src/assets/logo.svg"
-                alt="logo"
-              />
-            </a>
+            <div>
+              <a href="#">
+                <img
+                  className="h-11 w-auto"
+                  src="/src/assets/logo.svg"
+                  alt="logo"
+                />
+              </a>
+            </div>
 
             <div className="hidden md:flex items-center gap-8 transition duration-500 text-slate-800">
               <a href="#" className="hover:text-green-600 transition">
@@ -200,45 +202,35 @@ const Hero = () => {
             <div className="absolute top-28 xl:top-10 -z-10 left-1/4 size-72 sm:size-96 xl:size-120 2xl:size-132 bg-green-300 blur-[100px] opacity-30"></div>
 
             {/* Avatars + Stars */}
-            <div className="flex items-center mt-24">
+            <div className="flex items-center mt-24 flex-col gap-6 mb-4 md:flex-row">
               <div className="flex -space-x-3 pr-3">
                 <img
                   src="/src/assets/1.png"
                   alt="user3"
-                  className="size-8 object-cover rounded-full border-2 border-white hover:-translate-y-0.5 transition z-[1]"
+                  className="size-28 object-cover rounded-full border-2 border-white hover:-translate-y-0.5 transition z-[1]"
                 />
                 <img
                   src="/src/assets/2.png"
                   alt="user1"
-                  className="size-8 object-cover rounded-full border-2 border-white hover:-translate-y-0.5 transition z-2"
+                  className="size-28 object-cover rounded-full border-2 border-white hover:-translate-y-0.5 transition z-2"
                 />
                 <img
                   src="/src/assets/3.png"
                   alt="user2"
-                  className="size-8 object-cover rounded-full border-2 border-white hover:-translate-y-0.5 transition z-[3]"
-                />
-                <img
-                  src="/src/assets/4.png"
-                  alt="user3"
-                  className="size-8 object-cover rounded-full border-2 border-white hover:-translate-y-0.5 transition z-[4]"
-                />
-                <img
-                  src="/src/assets/5.jpg"
-                  alt="user5"
-                  className="size-8 rounded-full border-2 border-white hover:-translate-y-0.5 transition z-[5]"
+                  className="size-28 object-cover rounded-full border-2 border-white hover:-translate-y-0.5 transition z-[3]"
                 />
               </div>
 
               <div>
-                <div className="flex ">
+                <div className="flex">
                   {Array(5)
                     .fill(0)
                     .map((_, i) => (
                       <svg
                         key={i}
                         xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
+                        width="26"
+                        height="26"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -252,7 +244,7 @@ const Hero = () => {
                       </svg>
                     ))}
                 </div>
-                <p className="text-sm text-gray-700">Used by 10,000+ users</p>
+                <p className="text-2xl font-semibold text-gray-700">Used by 10,000+ users</p>
               </div>
             </div>
 
@@ -271,7 +263,8 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex items-center gap-4 ">
-              <Link to="/app"
+              <Link
+                to="/app"
                 className="bg-green-500 hover:bg-green-600 text-white rounded-full px-9 h-12 m-1 ring-offset-2 ring-1 ring-green-400 flex items-center transition-colors"
               >
                 Get started
